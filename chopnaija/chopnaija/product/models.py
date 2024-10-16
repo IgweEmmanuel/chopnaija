@@ -1,11 +1,11 @@
 from django.db import models
-from mptt.models import MPTTModel, TreeForeignKey
+from mptt.models import MPTTModel,TreeForeignKey
 
 
 # Create your models here.
 class Category(models.Model):
     name = models.CharField(max_length=100, null=False, blank=False)
-    parent = TreeForeignKey("self", on_delete=models.PROTECT, null=True, blank=True)
+    parent = models.ForeignKey("self", on_delete=models.PROTECT, null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -23,7 +23,7 @@ class Product(models.Model):
     description = models.TextField(max_length=1000, blank=True)
     is_digital = models.BooleanField()
     brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
-    category = TreeForeignKey(
+    category = models.ForeignKey(
         "Category", on_delete=models.SET_NULL, null=True, blank=True
     )
 
