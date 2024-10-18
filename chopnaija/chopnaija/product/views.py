@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .models import Category, Brand, Product
-from .serializers import CategorySerializer, BrandSerializer, ProductSerializer
+from .models import Category, Shop, Product
+from .serializers import CategorySerializer, ShopSerializer, ProductSerializer
 from rest_framework.response import Response
 from drf_spectacular.utils import extend_schema
 
@@ -19,17 +19,17 @@ class CategoryView(viewsets.ViewSet):
         return Response(serializer.data)
 
 
-class BrandView(viewsets.ViewSet):
+class ShopView(viewsets.ViewSet):
     """Category view
 
     Args:
         viewsets: views for client access to database data
     """
-    queryset = Brand.objects.all()
+    queryset = Shop.objects.all()
     
-    @extend_schema(responses=BrandSerializer)
+    @extend_schema(responses=ShopSerializer)
     def list(self, request):
-        serializer = BrandSerializer(self.queryset, many=True)
+        serializer = ShopSerializer(self.queryset, many=True)
         return Response(serializer.data)
     
     
