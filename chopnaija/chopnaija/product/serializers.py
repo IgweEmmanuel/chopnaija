@@ -12,7 +12,7 @@ class ShopSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 class ProductSerializer(serializers.ModelSerializer):
-    brand = ShopSerializer()
+    shop = ShopSerializer()
     category = CategorySerializer()
     class Meta:
         model = Product
