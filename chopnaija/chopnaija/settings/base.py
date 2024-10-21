@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     "jazzmin",
     "django.contrib.admin",
     # custom Apps
-    "chopnaija.product",
+    "product",
+    "accounts",
 ]
 
 MIDDLEWARE = [
@@ -71,6 +72,13 @@ TEMPLATES = [
         },
     },
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
 
 WSGI_APPLICATION = "chopnaija.wsgi.application"
 
@@ -154,3 +162,5 @@ JAZZMIN_SETTINGS = {
     "sidebar_nav_small_text": True,
     "sidebar_nav_small_text": True,
 }
+
+AUTH_USER_MODEL = 'accounts.User'

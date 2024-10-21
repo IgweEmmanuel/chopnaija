@@ -1,13 +1,13 @@
 from django.db import models
 from django.utils.text import slugify
-from mptt.models import MPTTModel,TreeForeignKey
+# from mptt.models import MPTTModel,TreeForeignKey
 
 
 # Create your models here.
 class Category(models.Model):
     name = models.CharField(max_length=100, null=False, blank=False)
     parent = models.ForeignKey("self", on_delete=models.PROTECT, null=True, blank=True)
-    slug = models.SlugField(max_length=200, blank=True)
+    slug = models.SlugField(max_length=200, blank=True, null=True)
     
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
@@ -19,7 +19,7 @@ class Category(models.Model):
 
 class Shop(models.Model):
     name = models.CharField(max_length=100)
-
+ 
 
     def __str__(self):
         return self.name
@@ -29,6 +29,7 @@ class QuantityVariant(models.Model):
     
     def __str__(self):
         return self.variant_name
+    
 class ColorVariant(models.Model):
     color_name = models.CharField(max_length=100)
     color_code = models.CharField(max_length=100)
@@ -54,7 +55,7 @@ class Product(models.Model):
         "Category", on_delete=models.SET_NULL, null=True, blank=True
     )
     stock = models.IntegerField(default=100)
-    quanty_type = models.ForeignKey(QuantityVariant, on_delete=models.PROTECT, null=True, blank=True)
+    quantity_type = models.ForeignKey(QuantityVariant, on_delete=models.PROTECT, null=True, blank=True)
     color_type = models.ForeignKey(ColorVariant, on_delete=models.PROTECT, null=True, blank=True)
     size_type = models.ForeignKey(SizeVariant, on_delete=models.PROTECT, null=True, blank=True)
 
