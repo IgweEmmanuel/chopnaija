@@ -22,8 +22,7 @@
 #             return Response({"error": "No data provided"}, status=status.HTTP_204_NO_CONTENT)
 
 
-from rest_framework import viewsets, status
-from rest_framework.response import Response
+from rest_framework import viewsets
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from .models import User
 from .serializers import UserSerializer

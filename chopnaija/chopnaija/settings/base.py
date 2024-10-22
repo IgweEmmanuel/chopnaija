@@ -41,8 +41,9 @@ INSTALLED_APPS = [
     "jazzmin",
     "django.contrib.admin",
     # custom Apps
-    "product",
+    "store",
     "accounts",
+    "cart",
 ]
 
 MIDDLEWARE = [

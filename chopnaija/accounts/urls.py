@@ -5,7 +5,7 @@ from rest_framework_simplejwt.views import (
     TokenVerifyView,
 )
 from rest_framework.routers import DefaultRouter
-# ffrom django.urls import path, include
+# from django.urls import path, include
 from .views import UserViewSet, VendorProfileView, CustomerProfileView
 
 router = DefaultRouter()
