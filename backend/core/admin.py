@@ -4,6 +4,9 @@ from django.contrib.auth.admin import UserAdmin
 
 # Register your models here.
 class CustomUserAdmin(UserAdmin):
+    """
+    CustomUserAdmin
+    """
     add_fieldsets = (
         (None, {
             'classes': ('wide',),

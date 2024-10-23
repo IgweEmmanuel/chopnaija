@@ -4,6 +4,9 @@ from chopnaija import settings
 # from mptt.models import MPTTModel,TreeForeignKey
 
 class Product(models.Model):
+    """
+    Product
+    """
     CATEGORY = (("Vegetables", "VEGETABLES"), ("Fruits", "FRUITS"), ("Meat", "MEAT"))
     name = models.CharField(max_length=255)
     slug = models.SlugField(unique=True, blank=True, null=True)
@@ -13,9 +16,15 @@ class Product(models.Model):
     image = models.ImageField(upload_to='images/', blank=True, null=True)
     
     def __str__(self):
+        """
+        String representation of the product
+        """
         return self.name
     
     def save(self, *args, **kwargs):
+        """
+        Save the product
+        """
         if not self.slug:
             self.slug = slugify(self.name)
             unique_slug = self.slug
