@@ -28,7 +28,8 @@ DEBUG = True
 # Application definition
 
 INSTALLED_APPS = [
-    # "django.contrib.admin",
+    "jazzmin",
+    "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
@@ -37,21 +38,28 @@ INSTALLED_APPS = [
     # external packages
     "rest_framework",
     "drf_spectacular",
-    "mptt",
-    "jazzmin",
-    "django.contrib.admin",
+
+    "corsheaders",
     # custom Apps
-    "chopnaija.product",
+    "store",
+    "core",
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+]
+
+CORS_ALLOWED_ORIGINS = [
+"http://localhost:5173",
+"http://localhost:5174",
+"http://localhost:5175",
 ]
 
 ROOT_URLCONF = "chopnaija.urls"
@@ -71,6 +79,13 @@ TEMPLATES = [
         },
     },
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
 
 WSGI_APPLICATION = "chopnaija.wsgi.application"
 
@@ -154,3 +169,5 @@ JAZZMIN_SETTINGS = {
     "sidebar_nav_small_text": True,
     "sidebar_nav_small_text": True,
 }
+
+AUTH_USER_MODEL = 'core.CustomUser'
