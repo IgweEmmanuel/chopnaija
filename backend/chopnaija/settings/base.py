@@ -41,8 +41,9 @@ INSTALLED_APPS = [
 
     "corsheaders",
     # custom Apps
-    "store",
+    "products",
     "core",
+    "cart",
 ]
 
 MIDDLEWARE = [
@@ -61,6 +62,11 @@ CORS_ALLOWED_ORIGINS = [
 "http://localhost:5174",
 "http://localhost:5175",
 ]
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
 
 ROOT_URLCONF = "chopnaija.urls"
 
@@ -137,10 +143,19 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 REST_FRAMEWORK = {
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10,
 }
 
 SPECTACULAR_SETTINGS = {
-    "TITLE": "Django DRF Ecommerce",
+    'TITLE': 'Product API',
+    'DESCRIPTION': 'API for managing products, categories, and related data',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    'COMPONENT_SPLIT_REQUEST': True,
+    'SWAGGER_UI_SETTINGS': {
+        'deepLinking': True,
+    }
 }
 
 JAZZMIN_SETTINGS = {
@@ -171,3 +186,5 @@ JAZZMIN_SETTINGS = {
 }
 
 AUTH_USER_MODEL = 'core.CustomUser'
+
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
