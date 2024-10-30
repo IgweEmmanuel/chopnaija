@@ -9,48 +9,75 @@ PROJECT: CHOPNAIJA
 
 
 
-Edumore is an educational web application that answers the pain points of teachers and students and schools as well. Helping students learn through videos and texts. Also helps teachers collaborate by sharing notes and ideas for improved performance and efficiency in their teaching delivery and students' performance.
+ChopNaija - Farm Produce Ecommerce
+ChopNaija is an e-commerce platform that connects farmers and customers, enabling users to order fresh farm produce from the comfort of their homes.
+Features
 
-​
+User Registration and Authentication: Customers can create accounts, log in, and manage their profiles.
+Product Catalog: Customers can browse and search for a variety of farm produce, including fruits, vegetables, grains, and more.
+Shopping Cart and Checkout: Customers can add products to their cart, view the cart summary, and complete the checkout process.
+Order Management: Customers can view their order history, track the status of their orders, and initiate returns or exchanges.
+Farmer Management: Farmers can create and manage their product listings, update inventory, and view sales data.
+Admin Dashboard: Site administrators can manage user accounts, product listings, orders, and other platform-wide settings.
 
-My Personal Story on Edumore:
+Technologies Used
 
-Hey Chiboy why is your note not up to date? My teacher cleaned the board before I could finish copying from the board. 
-Chiboy you failed again this term! Mummy yelled at Chiboy.
+Frontend: React.js, React Router, Axios, Tailwind CSS
+Backend: Django, Django REST Framework, SQLite/PostgreSQL
+Authentication: JSON Web Tokens (JWT)
+Hosting: Vercel (frontend), Heroku (backend)
 
-​
+Installation and Setup
 
-Teaching Computer Studies and Data Processing for four years has exposed me to first hand experience with what teachers, students and parents pass through in secondary and primary schools as regarding the issue of performance and notes.
+Clone the repository:
 
-It has always been a serious issue when it comes to note, assingments and exams.
+bashCopygit clone https://github.com/your-username/chopnaija.git
 
-I could remeber teachers been penalized for students/pupil's notes not been up to date. 
+Install the dependencies:
 
-Ofcourse you know that note taking is key to the success of any student and I don't bame the school managements for taking some actions sometimes. But the teachers deserve some rest too on this isse.
+bashCopy# Frontend
+cd chopnaija/frontend
+npm install
 
+# Backend
+cd chopnaija/backend
+pip install -r requirements.txt
 
+Set up the environment variables:
 
-We actually need more better ways to stop students from failing and stop all these shouts on teachers and even the management to offer bettre services to parents.
+Copy# Frontend
+cp .env.example .env
+# Update the values in the .env file
 
-To this note Edumore was born to offer the MORE better solutions to the note issues and extends profficiency among teachers through collabortion with fellow teachers. This is so that student's performance can increase and teachers knowledge become excellent in their areas through collaboration and school managements achieving better results.
+# Backend
+cp .env.example .env
+# Update the values in the .env file
 
-​
+Start the development servers:
 
-It offers the following features:
+bashCopy# Frontend
+cd chopnaija/frontend
+npm start
 
-1. Collaboration
+# Backend
+cd chopnaija/backend
+python manage.py runserver
 
-2. Notes in pdf/doc formats
+Access the application in your browser:
 
-3. Notes in Videos
+CopyFrontend: http://localhost:3000
+Backend: http://localhost:8000
+Contributing
+We welcome contributions to the ChopNaija project. If you'd like to contribute, please follow these steps:
 
-4. Student's access to these materials.
+Fork the repository
+Create a new branch for your feature or bug fix
+Make your changes and commit them
+Push your changes to your forked repository
+Submit a pull request to the main repository
 
-​
-
-This helps teacher's work to be less stressful and students copy less note while using that time to listen more in class and study with the platform.
-
-​
+License
+ChopNaija is licensed under the MIT License. CopyRetryClaude does not have the ability to run the code it generates yet. Claude does not have internet access. Links provided may not be accurate or up to date.Claude can make mistakes. Please double-check responses.
 
 MY EXPERIENCE BUILDING THIS PROJECT:
 
