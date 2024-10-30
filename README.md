@@ -31,31 +31,31 @@ Installation and Setup
 
 Clone the repository:
 
-```
+```js
 git clone https://github.com/your-username/chopnaija.git
 ```
 
 Install the dependencies:
 
 # Frontend
-```
+```js
 cd chopnaija/frontend
 npm install
 
 # Backend
-```
+```py
 cd chopnaija/backend
 pip install -r requirements.txt
 ```
 Set up the environment variables:
 
 # Frontend
-```
+```js
 cp .env.example .env
 # Update the values in the .env file
 
 # Backend
-```
+```py
 cp .env.example .env
 ```
 # Update the values in the .env file
@@ -63,18 +63,18 @@ cp .env.example .env
 Start the development servers:
 
 # Frontend
-```
+```js
 cd chopnaija/frontend
 npm start
 ```
 # Backend
-```
+```py
 cd chopnaija/backend
 python manage.py runserver
 ```
 Access the application in your browser:
 
-```
+```js
 Frontend: http://localhost:3000
 Backend: http://localhost:8000
 ```
