@@ -31,43 +31,54 @@ Installation and Setup
 
 Clone the repository:
 
-bashCopygit clone https://github.com/your-username/chopnaija.git
+```
+git clone https://github.com/your-username/chopnaija.git
+```
 
 Install the dependencies:
 
-bashCopy# Frontend
+# Frontend
+```
 cd chopnaija/frontend
 npm install
 
 # Backend
+```
 cd chopnaija/backend
 pip install -r requirements.txt
-
+```
 Set up the environment variables:
 
-Copy# Frontend
+# Frontend
+```
 cp .env.example .env
 # Update the values in the .env file
 
 # Backend
+```
 cp .env.example .env
+```
 # Update the values in the .env file
 
 Start the development servers:
 
-bashCopy# Frontend
+# Frontend
+```
 cd chopnaija/frontend
 npm start
-
+```
 # Backend
+```
 cd chopnaija/backend
 python manage.py runserver
-
+```
 Access the application in your browser:
 
-CopyFrontend: http://localhost:3000
+```
+Frontend: http://localhost:3000
 Backend: http://localhost:8000
-Contributing
+```
+# Contributing
 We welcome contributions to the ChopNaija project. If you'd like to contribute, please follow these steps:
 
 Fork the repository
