@@ -4,9 +4,15 @@
 
 This is a food ordering web application. Users use it to make orders for their food online using the web app.
 PROJECT: CHOPNAIJA
+# Product Listing
+![chopnaija](https://github.com/IgweEmmanuel/chopnaija/blob/main/frontend/public/chopnaija.png)
 
-![chopnaija](https://github.com/IgweEmmanuel/chopnaija/blob/main/frontend/public/chopnaija.png)                                             
+# Product Page
 ![Screenshot 2024-07-06 at 11 37 59](https://github.com/IgweEmmanuel/chopnaija/blob/main/frontend/public/tomato.png)
+
+
+# Product in Cart
+![tomato in cart](https://github.com/IgweEmmanuel/chopnaija/blob/main/frontend/public/cart.png)
 
 
 
