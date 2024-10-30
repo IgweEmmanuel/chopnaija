@@ -5,7 +5,7 @@
 This is a food ordering web application. Users use it to make orders for their food online using the web app.
 PROJECT: CHOPNAIJA
 
-![Screenshot 2024-07-06 at 11 34 19](https://github.com/IgweEmmanuel/chopnaija/frontend/public/136444225/Screenshot2024-10-30at13.01.28.png)                                             ![Screenshot 2024-07-06 at 11 37 59](https://github.com/IgweEmmanuel/Project_Edumore/assets/136444225/78182c0a-0124-4366-86a5-5a44c88a1e0a)
+![Screenshot 2024-07-06 at 11 34 19](https://github.com/IgweEmmanuel/chopnaija/frontend/public/136444225/Screenshot 2024-10-30 at 13.01.28.png)                                             ![Screenshot 2024-07-06 at 11 37 59](https://github.com/IgweEmmanuel/Project_Edumore/assets/136444225/78182c0a-0124-4366-86a5-5a44c88a1e0a)
 
 
 
