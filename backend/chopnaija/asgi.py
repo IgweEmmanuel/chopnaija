@@ -1,5 +1,5 @@
 """
-ASGI config for chopnaija project.
+ASGI config for shoppit project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 

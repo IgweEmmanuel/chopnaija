@@ -1,14 +1,3 @@
-# from rest_framework import serializers
-# from .models import CustomUser
-
-# class CustomUserSerializer(serializers.ModelSerializer):
-#     """
-#     CustomUserSerializer
-#     """
-#     class Meta:
-#         model = CustomUser
-#         fields = ['id', 'username', 'email', 'city', 'state', 'phone_number', 'address']
-
 
 # serializers.py
 from rest_framework import serializers
@@ -27,4 +16,4 @@ class CustomUserSerializer(serializers.ModelSerializer):
 class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
-        fields = '__all__'  # or specify fields explicitly: ['image', 'full_name', 'country', 'about', 'date']
+        fields = '__all__'  # or specify fields explicitly: ['image', 'full_name', 'country', 'about', 'date']aa
