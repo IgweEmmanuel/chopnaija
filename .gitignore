@@ -6,3 +6,6 @@ command.md
 db.sqlite3
 .coverage
 .vscode
+schema.yml
+.coverage
+htmlcov/
