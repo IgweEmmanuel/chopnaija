@@ -41,7 +41,7 @@ Install the dependencies:
 ```js
 cd chopnaija/frontend
 npm install
-
+```
 # Backend
 ```py
 cd chopnaija/backend
@@ -53,7 +53,7 @@ Set up the environment variables:
 ```js
 cp .env.example .env
 # Update the values in the .env file
-
+```
 # Backend
 ```py
 cp .env.example .env
